@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: none;
+    outline: none;
 }
 
 body {
@@ -20,19 +21,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 30px;
 }
 
 section {
     margin-bottom: 80px;
-}
-
-header {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
 }
 
 .header__bg {
@@ -42,7 +36,7 @@ header {
     right: 0;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 60%;
     background-color: #0a91b1;
     transform: skewY(-30deg);
     transform-origin: top left;
@@ -55,6 +49,7 @@ header {
     margin-top: 50px;
     position: relative;
     box-shadow: 2px 2px 5px gray;
+    margin-bottom: 50px;
 }
 
 .name {
@@ -70,13 +65,16 @@ header {
     filter: contrast(80%);
 }
 
+.about-me-text-elements h2{
+    text-align: center;
+}
+
 #about-me, #my-work {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px 30px;
-    margin-top: 20px;
 }
 
 #about-me p {
@@ -152,4 +150,74 @@ footer p {
 
 .image-footer img {
     width: 100%;
+}
+
+/* Tablet Layout*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #about-me {
+        display: block; /* Change from flex to block */
+        position: relative;
+        padding: 20px 30px;
+        overflow: auto; /* Clear the float */
+    }
+
+    .container-img {
+        width: 25em;
+        height: auto;
+        margin-top: 50px;
+        position: relative;
+        float: left; /* Float the image container to left */
+        margin-right: 20px;
+        margin-bottom: 0px;
+        box-shadow: none;
+    }
+    
+    .name {
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 250px;
+        font-size: 4em;
+        width: 10em;
+        height: auto;
+    }
+    
+    .about-me-text-elements {
+        background-color: white;
+        box-shadow: 2px 2px 5px gray;
+        padding: 60px 20px;
+        margin-top: 150px;
+        width: 650px;
+        margin-left: 50px;
+    }
+
+    .container-projects {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    #contact-logos-aboutme {
+        display: none;
+    }
+
+    footer {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .image-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-right: 20px;
+    }
+
+    .contact {
+        width: 50%;
+    }
+
+    .image-footer img {
+        width: 100%;
+    }
 }
