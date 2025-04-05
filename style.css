@@ -78,3 +78,14 @@ header {
 #about-m2 p {
     font-size: 1.5em;
 }
+
+.container-contact-logos {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-contact-logos img {
+    width: 1.5em;
+}
