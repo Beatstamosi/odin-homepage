@@ -221,3 +221,97 @@ footer p {
         width: 100%;
     }
 }
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+    .header__bg {
+        height: 90%;
+        transform: skewY(-10deg);
+    }
+
+
+    .container-img {
+        width: 40em;
+        height: auto;
+        margin-top: 50px;
+        position: relative;
+        float: left; /* Float the image container to left */
+        margin-right: 20px;
+        margin-bottom: 0px;
+        box-shadow: none;
+        z-index: 2;
+    }
+
+
+    #about-me {
+        display: block; /* Change from flex to block */
+        position: relative;
+        padding: 20px 30px;
+        overflow: auto; /* Clear the float */
+    }
+
+    .about-me-text-elements {
+        background-color: white;
+        box-shadow: 2px 2px 5px gray;
+        margin-left: 50px;
+        margin-top: 100px;
+        padding: 50px 50px 100px 50px;
+    }
+
+    .about-me-text-elements h2 {
+        text-align: left;
+    }
+
+    .container-about-me-text-and-logos {
+        position: relative;
+    }
+
+    #contact-logos-aboutme {
+        position: absolute;
+        bottom: 20px;
+        right: 50px;
+    }
+
+
+    #my-work {
+        align-items: flex-start;
+    }
+
+    #my-work h2 {
+        text-align: left;
+        margin-left: 110px;
+    }
+
+
+    .container-projects {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    footer {
+        flex-direction: row;
+        gap: 20px;
+        padding: 50px;
+    }
+
+    .image-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        margin-left: 100px;
+    }
+
+    .contact {
+        width: 60%;
+    }
+
+    .image-footer img {
+        width: 100%;
+    }
+
+    #logos-footer {
+        justify-content: flex-start;
+    }
+
+}
